@@ -1,0 +1,63 @@
+<!--Calculator Using HTML, CSS, and JavaScript -->
+
+<!-- Step 1: Create the basic structure of the calculator -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+            <!-- result box -->
+    <!-- Step 2: Create a result area to see the number.
+     Every calculator has a box to view the calculations. In the same way, a box is made in this calculator. -->
+     <div class="result">
+        <input type="text" id="InputBox" value="0" />
+     </div>
+
+     <!-- Step 3: Create a button to clear the result box.
+      Every calculator has a button to clear the result box. In the same way, a
+      button is made in this calculator. -->
+      <div>
+        <button class="button-operators">AC</button>
+        <button class="button-operator">DEL</button>
+        <button class="button-operator">%</button>
+        <button class="button-operator">/</button>
+      </div>
+
+      <div>
+        <button class="button-number">7</button>
+        <button class="button-number">8</button>
+        <button class="button-number">9</button>
+        <button class="button-operator star">*</button>
+      </div>
+
+      <div>
+        <button class="button-number">4</button>
+        <button class="button-number">5</button>
+        <button class="button-number">6</button>
+        <button class="button-operator">-</button>
+      </div>
+
+      <div>
+        <button class="button-number">1</button>
+        <button class="button-number">2</button>
+        <button class="button-number">3</button>
+        <button class="button-operator">+</button>
+      </div>
+
+      <div>
+        <button class="button-number zero">0</button>
+        <button class="button-number">.</button>
+        <button class="equalButton">=</button>
+      </div>
+      <!-- CSS programming codes used to design the buttons above. Each of the buttons here has been converted to a neomorphic design, meaning the buttons are slightly raised. -->
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
