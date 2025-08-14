@@ -6,7 +6,7 @@ It supports **basic arithmetic**, **scientific operations**, **keyboard input**,
 ---
 
 ## 📸 Screenshot
-![Calculator Screenshot](./ScreenShortCalculator)
+![Calculator Screenshot](ScreenShortCalculator)
 
 ---
 
