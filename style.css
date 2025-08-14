@@ -1,0 +1,160 @@
+/* =======================
+   GENERAL PAGE STYLING
+   ======================= */
+ body{
+    background: #1C1F26; /*Dark Navy Background(Window 11 Calc Look)*/
+    display: flex;/*Page ke content ko center karne ke liye flexbox*/
+    justify-content: center; /*Content ko horizontally center karne ke liye*/
+    align-items: center; /*Content ko vertically center karne ke liye*/
+    height: 100vh; /*Viewport height ko cover karne ke liye Full Screen Height*/
+    font-family: "Plus Jakarta Sans", sans-serif; /*Font Family for the page*/
+ }
+
+ /* =======================
+   CALCULATOR CONTAINER
+   ======================= */
+.calculator{
+    background: #1C1F26; /* Same as page bg for seamless look */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+     /* Inner shadow effect (neumorphism style) */
+      box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.7),
+                    inset -5px -5px 15px rgba(255, 255, 255, 0.1); 
+    width: 320px; /* Fixed width for the calculator */
+}
+
+/* =======================
+   HEADER STYLING
+   ======================= */
+.calc-header{
+    color:#E0E0E0;/* Light Grey for text */
+    font-size: 18px; /* Font size for the header */
+    margin-bottom: 15px; /* Space below the header */
+    display: flex; /*Icon and text side by side; */
+    align-items: center; /* Center icon and text vertically */
+    gap: 10px; /* Space between icon and text */
+}
+
+/* =======================
+   DISPLAY FIELD
+   ======================= */
+.display{
+    box-sizing: border-box; /* Padding counted inside width */
+    width: 100%; /* Full width of the calculator */
+    height: 110px; /* Fixed height for the display */
+    text-align: right;/* Text right-aligned like a calculator */
+    padding: 12px 18px;/*Space inside display field*/
+    border-radius: 15px; /* Rounded corners */
+    background: #2A2E35; /* Slightly lighter than page bg */
+    display: flex; /* Allow expression & current value vertically stacked */
+    flex-direction: column; /* Arrange in vertical order */
+    justify-content: center; /* Center vertically */
+    margin-bottom: 18px; /* Space below the display */
+    overflow: hidden; /* prevent content overflow */
+}
+
+/* Dim (expression text) style */
+.dim {
+    color: rgba(224,224,224,0.5); /* Light gray with transparency */
+    font-size: 20px; /* Smaller text size for expression */
+}
+
+/* Bright (current number/result) style */
+.bright {
+    color: #E0E0E0; /* Bright text */
+    font-size: 40px; /* Larger size for main number */
+    line-height: 1.2;/* Adjust line height for better readability */
+    word-break: break-all;/* Allow text to wrap */
+    max-width: 100%; /* Prevent text from exceeding display width */
+}
+
+/* Auto-shrink font if text is long */
+.bright.shrink {
+    font-size: 28px; /* smaller for very long numbers */
+}
+
+/* Button press highlight when using keyboard */
+.active-key {
+    transform: scale(0.95); /* Slight shrink on press */
+    background-color: #555 !important; /* Temporary darker color */
+}
+
+/* =======================
+   BUTTON GRID
+   ======================= */
+.buttons{
+    display: grid; /* Grid layout for calculator keys */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+    gap: 10px; /* Space between buttons */
+}
+
+/* =======================
+   BASE BUTTON STYLE
+   ======================= */
+button{
+    height: 60px; /* Fixed height for buttons */
+    font-size: 20px; /*Button text size*/
+    border: none; /* No border */
+    border-radius: 15px; /* Rounded corners */
+    color: #E0E0E0; /* Light text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.2s ease; /* Smooth hover press effects */
+}
+
+/* =======================
+   OPERATOR BUTTONS
+   (% CE C ⌫ ÷ × − + Scientific)
+   ======================= */
+button.op-btn{
+    background: #2A2E35; /* Dark gray/navy background */
+    /* Drop shadow for neumorphic look */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7), 
+                -3px -3px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Hover effect for operator buttons */
+button.op-btn:hover {
+    background: #353941; /* Slightly lighter on hover */
+}
+
+/* Pressed effect for operator buttons */
+button.op-btn:active {
+    /* Pressed look: inner shadow */
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.7), 
+                inset -3px -3px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* =======================
+   NUMBER BUTTONS (0–9, ., ±)
+   ======================= */
+button.num-btn{
+    background: #3A3F46; /* Slightly lighter than operator buttons */
+    /* Drop shadow for neumorphic look */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7), 
+                -3px -3px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Hover effect for number buttons */
+button.num-btn:hover {
+    background: #4A4E56; /* Slightly darker on hover */
+}
+
+/* Pressed effect for number buttons */
+button.num-btn:active {
+    /* Pressed look */
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.7), 
+                inset -3px -3px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* =======================
+   EQUAL BUTTON (=)
+   ======================= */
+.equal{
+    background: #3c5a78; /* Blue tone */
+    color: #E0E0E0; /* Light text color */
+    grid-row: span 2; /* Span two rows vertically */
+}
+/* Hover effect for equal button */
+.equal:hover {
+    background: #4a6f8c; /* Slightly lighter blue on hover */
+}

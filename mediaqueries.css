@@ -1,0 +1,75 @@
+/* ===== Default styles already set for large screens (desktop) ===== */
+/* Make sure your main .calculator container has fixed width & height initially */
+
+/* ===== Tablets (landscape & portrait) ===== */
+@media screen and (max-width: 1024px) {
+    .calculator {
+        width: 80%;              /* Shrinks width for smaller screens */
+        max-width: 400px;        /* Prevents it from being too big */
+        height: auto;            /* Auto height */
+    }
+
+    .display {
+        font-size: 1.8rem;       /* Slightly smaller font for display */
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1.4rem;       /* Adjust button font */
+        padding: 12px;
+    }
+}
+
+/* ===== Large mobile phones ===== */
+@media screen and (max-width: 768px) {
+    .calculator {
+        width: 90%;              
+        max-width: 350px;
+    }
+
+    .display {
+        font-size: 1.6rem;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
+
+/* ===== Small mobile phones ===== */
+@media screen and (max-width: 480px) {
+    .calculator {
+        width: 95%;
+        max-width: 300px;
+    }
+
+    .display {
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+/* ===== Very small devices / portrait mode ===== */
+@media screen and (max-width: 320px) {
+    .calculator {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .display {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}

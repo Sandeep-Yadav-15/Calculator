@@ -1,0 +1,92 @@
+<!-- This tells the browser to use HTML5 -->
+<!DOCTYPE html>
+
+<!-- Root HTML tag, language set to English -->
+<html lang="en">
+<head>
+  <!-- Character encoding (UTF-8 supports all characters) -->
+  <meta charset="UTF-8">
+
+  <!-- Page responsive banane ke liye -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title jo browser tab me show hoga -->
+  <title>Calculator</title>
+
+  <!-- Bootstrap Icons library (for calculator icon) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Google Fonts connection -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts import -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <!-- Linking our CSS file -->
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+
+  <!-- Calculator ka main container -->
+  <div class="calculator">
+
+    <!-- Header section (icon + title) -->
+    <div class="calc-header">
+      <i class="bi bi-calculator-fill"></i> <!-- Calculator icon -->
+      Calculator <!-- Title text -->
+    </div>
+
+    <!-- Display area: top line for expression (dim), bottom for current value (bright) -->
+    <div id="display" class="display">
+      <span id="expression" class="dim"></span>  <!-- Pichla expression (light/dim color) -->
+      <span id="current" class="bright">0</span> <!-- Current number ya result (bright color) -->
+    </div>
+
+    <!-- All calculator buttons -->
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="op-btn" onclick="setOperator('%')">%</button> <!-- Modulus -->
+      <button class="op-btn" onclick="clearEntry()">CE</button>    <!-- Clear Entry -->
+      <button class="op-btn" onclick="clearAll()">C</button>       <!-- Clear All -->
+      <button class="op-btn" onclick="backspace()">⌫</button>      <!-- Backspace -->
+
+      <!-- Row 2 - Scientific -->
+      <button class="op-btn" onclick="reciprocal()">1/x</button>
+      <button class="op-btn" onclick="square()">x²</button>
+      <button class="op-btn" onclick="sqrt()">²√x</button>
+      <button class="op-btn" onclick="setOperator('/')">÷</button> <!-- Division -->
+
+      <!-- Row 3 -->
+      <button class="num-btn" onclick="append('7')">7</button>
+      <button class="num-btn" onclick="append('8')">8</button>
+      <button class="num-btn" onclick="append('9')">9</button>
+      <button class="op-btn" onclick="setOperator('*')">×</button> <!-- Multiplication -->
+
+      <!-- Row 4 -->
+      <button class="num-btn" onclick="append('4')">4</button>
+      <button class="num-btn" onclick="append('5')">5</button>
+      <button class="num-btn" onclick="append('6')">6</button>
+      <button class="op-btn" onclick="setOperator('-')">-</button> <!-- Subtraction -->
+
+      <!-- Row 5 -->
+      <button class="num-btn" onclick="append('1')">1</button>
+      <button class="num-btn" onclick="append('2')">2</button>
+      <button class="num-btn" onclick="append('3')">3</button>
+      <button class="op-btn" onclick="setOperator('+')">+</button> <!-- Addition -->
+
+      <!-- Row 6 -->
+      <button class="num-btn" onclick="toggleSign()">±</button>     <!-- Change sign -->
+      <button class="num-btn" onclick="append('0')">0</button>
+      <button class="num-btn" onclick="append('.')">.</button>     <!-- Decimal -->
+      <button class="equal" onclick="calculate()">=</button>       <!-- Equal -->
+    </div>
+  </div>
+
+  <!-- Linking our JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>
